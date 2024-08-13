@@ -41,7 +41,7 @@ body {
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 70%;
+  height: 100%;
   display: block;
   background: url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat
 }
@@ -52,12 +52,12 @@ body {
   flex-direction: row;
   position: absolute;
   bottom: 0;
-  margin-left: 20px;
+  margin-left: 10px;
   flex-wrap: wrap;
 }
 
 .flower1 {
-  transform: translateY(100%);
+  transform: translateY(-120%);
   display: flex;
   justify-content: center;
   animation-name: grow-flower1;
@@ -65,16 +65,16 @@ body {
 }
 
 .flower2 {
-  transform: translateY(50%);
+  transform: translateY(-160%);
   display: flex;
   justify-content: center;
   animation-name: grow-flower2;
-  animation-duration: 4s;
+  animation-duration: 5s;
 }
 
 .flower1 .circle {
-  height: 80px;
-  width: 80px;
+  height: 70px;
+  width: 70px;
   background: var(--orange-gradient);
   border-radius: 50%;
   display: flex;
@@ -96,7 +96,7 @@ body {
 
 .flower1 .branch {
   height: 500px;
-  width: 7px;
+  width: 5px;
   background: var(--green-gradient);
   position: absolute;
   top: 0;
@@ -176,16 +176,16 @@ body {
 }
 
 .flower1.rose {
-  transform: translateY(270%);
+  transform: translateY(-90%);
   animation-name: grow-rose;
-  animation-duration: 4s;
+  animation-duration: 6s;
   z-index: 200;
 }
 
 .flower2.rose {
-  transform: translateY(250%);
+  transform: translateY(-70%);
   animation-name: grow-rose2;
-  animation-duration: 4s;
+  animation-duration: 8s;
   z-index: 200;
 }
 
@@ -194,7 +194,7 @@ body {
   height: 50px;
   width: 50px;
   animation: circle-anim;
-  animation-duration: 4s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   background: var(--pink);
 }
@@ -222,16 +222,16 @@ body {
 
 
 .flower1.daisy {
-  transform: translateY(200%);
+  transform: translateY(-65%);
   animation-name: grow-daisy;
-  animation-duration: 4s;
+  animation-duration: 6s;
   z-index: 200;
 }
 
 .flower2.daisy {
-  transform: translateY(260%);
+  transform: translateY(-70%);
   animation-name: grow-daisy2;
-  animation-duration: 4s;
+  animation-duration: 9s;
   z-index: 200;
 }
 
@@ -240,7 +240,7 @@ body {
   height: 60px;
   width: 60px;
   animation: circle-anim;
-  animation-duration: 4s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
   background: var(--daisy);
 }
@@ -258,7 +258,7 @@ body {
   }
 
   to {
-    transform: translateY(100%);
+    transform: translateY(-120%);
     opacity: 1;
   }
 }
@@ -270,7 +270,7 @@ body {
   }
 
   to {
-    transform: translateY(50%);
+    transform: translateY(-160%);
     opacity: 1;
   }
 }
@@ -282,7 +282,7 @@ body {
   }
 
   to {
-    transform: translateY(270%);
+    transform: translateY(-90%);
     opacity: 1;
   }
 }
@@ -294,7 +294,7 @@ body {
   }
 
   to {
-    transform: translateY(250%);
+    transform: translateY(-70%);
     opacity: 1;
   }
 }
@@ -306,7 +306,7 @@ body {
   }
 
   to {
-    transform: translateY(200%);
+    transform: translateY(-65%);
     opacity: 1;
   }
 }
@@ -318,7 +318,7 @@ body {
   }
 
   to {
-    transform: translateY(260%);
+    transform: translateY(-70%);
     opacity: 1;
   }
 }
