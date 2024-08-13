@@ -19,7 +19,7 @@
   --sunflower-gradient: linear-gradient(180deg, #08080a 0%, #5f4302 46%, #8c723e 100%);
   --sunflower-gradient1: linear-gradient(180deg, #08080a 0%, #860b07 46%, #8c723e 100%);
   --daisy: linear-gradient(0deg, #aafaff 0%, #dfd3df 50%, #f1aaaa 100%);
-  
+
   --purple: #D9ABFF;
   --pink: linear-gradient(19deg, #FAACA8 0%, #e5467e 100%);
   ;
@@ -45,21 +45,29 @@ body {
   overflow: hidden;
   background: url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat
 }
-.buttons{
+
+.buttons {
+  position: absolute;
+  bottom: 0;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 25px;
+  z-index: 10000;
 }
-#btn{
+
+#btn {
   cursor: pointer;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 100%;
   background: transparent;
-  color: white;
-  border: 1px solid white;
+  color: rgb(255, 255, 255);
+  border: 2px solid transparent;
+  font-size: 24px;
+  font-weight: bold;
 }
+
 .flowers {
   display: flex;
   justify-content: center;
@@ -258,7 +266,8 @@ body {
   animation-iteration-count: infinite;
   background: var(--daisy);
 }
- .daisy .circle .inner-circle {
+
+.daisy .circle .inner-circle {
   height: 20px;
   width: 20px;
   background: var(--red);
