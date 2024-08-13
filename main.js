@@ -31,6 +31,11 @@ function addPressEventOnFlowers(){
           random = getRandomInt(0,pickUpLines.length-1)
           alert(pickUpLines[random])
         }
+        if(elem.className == "inner-circle"){
+          elem.parentNode.parentNode.remove()
+          random = getRandomInt(0,pickUpLines.length-1)
+          alert(pickUpLines[random])
+        }
     })
   })
 }
