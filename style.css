@@ -1,0 +1,338 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: linear-gradient(to top, #093052, #010913);
+  --red: #F87575;
+  --orange: #F8C475;
+  --orange-gradient: linear-gradient(147deg, #f0d62a 0%, #d9a523 74%);
+  ;
+  --green: rgb(84, 112, 46);
+  --green-gradient: linear-gradient(180deg, #8ead06 0%, #007447 100%);
+  --green-gradient1: linear-gradient(120deg, #22855f 0%, #748d05 100%);
+  --blue: #75BFF8;
+  --sky: lighten($blue, 10);
+  --yellow: #e8f004;
+  --sunflower-gradient: linear-gradient(180deg, #08080a 0%, #5f4302 46%, #8c723e 100%);
+  --sunflower-gradient1: linear-gradient(180deg, #08080a 0%, #860b07 46%, #8c723e 100%);
+  --daisy: linear-gradient(0deg, #aafaff 0%, #dfd3df 50%, #f1aaaa 100%);
+  
+  --purple: #D9ABFF;
+  --pink: linear-gradient(19deg, #FAACA8 0%, #e5467e 100%);
+  ;
+}
+
+body {
+  /* background-image: linear-gradient(to top, #09203f 0%, #537895 100%); */
+  /* background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%); */
+  height: 100vh;
+  width: 100vw;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70%;
+  display: block;
+  background: url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat
+}
+
+.flowers {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  margin-left: 20px;
+  flex-wrap: wrap;
+}
+
+.flower1 {
+  transform: translateY(100%);
+  display: flex;
+  justify-content: center;
+  animation-name: grow-flower1;
+  animation-duration: 4s;
+}
+
+.flower2 {
+  transform: translateY(50%);
+  display: flex;
+  justify-content: center;
+  animation-name: grow-flower2;
+  animation-duration: 4s;
+}
+
+.flower1 .circle {
+  height: 80px;
+  width: 80px;
+  background: var(--orange-gradient);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.flower1 .circle .inner-circle {
+  height: 30px;
+  width: 30px;
+  background: var(--sunflower-gradient);
+  border-radius: 50%;
+  z-index: 99;
+  border: 1px;
+  border-color: #f6f8c2;
+  border-style: solid;
+}
+
+.flower1 .branch {
+  height: 500px;
+  width: 7px;
+  background: var(--green-gradient);
+  position: absolute;
+  top: 0;
+  z-index: 98;
+}
+
+.flower1 .branch .petal {
+  height: 10px;
+  width: 35px;
+  background: var(--green-gradient1);
+  position: absolute;
+  border-radius: 40%;
+}
+
+.flower1 .branch .petal1 {
+  top: 20%;
+  transform: skew(20deg) rotate(-30deg);
+}
+
+.flower1 .branch .petal2 {
+  top: 25%;
+  transform: skew(10deg) rotate(30deg) translate(-90%);
+}
+
+.flower2 .circle {
+  height: 80px;
+  width: 80px;
+  background: var(--orange-gradient);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.flower2 .circle .inner-circle {
+  height: 30px;
+  width: 30px;
+  background-color: var(--yellow);
+  border-radius: 50%;
+  z-index: 99;
+  border: 2px;
+  border-color: #f6f8c2;
+  border-style: solid;
+}
+
+.flower2 .branch {
+  height: 500px;
+  width: 7px;
+  background: var(--green-gradient);
+  position: absolute;
+  top: 0;
+  z-index: 98;
+}
+
+.flower2 .branch .petal {
+  height: 10px;
+  width: 35px;
+  background: var(--green-gradient1);
+  position: absolute;
+  border-radius: 40%;
+}
+
+.flower2 .branch .petal1 {
+  top: 30%;
+  transform: skew(20deg) rotate(-30deg);
+}
+
+.flower2 .branch .petal2 {
+  top: 35%;
+  transform: skew(10deg) rotate(30deg) translate(-90%);
+}
+
+.flower2 .branch .petal3 {
+  top: 32%;
+  transform: skew(10deg) rotate(-10deg);
+}
+
+.flower1.rose {
+  transform: translateY(270%);
+  animation-name: grow-rose;
+  animation-duration: 4s;
+  z-index: 200;
+}
+
+.flower2.rose {
+  transform: translateY(250%);
+  animation-name: grow-rose2;
+  animation-duration: 4s;
+  z-index: 200;
+}
+
+
+.rose .circle {
+  height: 50px;
+  width: 50px;
+  animation: circle-anim;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  background: var(--pink);
+}
+
+.rose .circle .inner-circle {
+  height: 20px;
+  width: 20px;
+  background-color: var(--purple);
+}
+
+.rose .branch .petal1 {
+  top: 10%;
+  transform: skew(20deg) rotate(-30deg);
+}
+
+.rose .branch .petal2 {
+  top: 13%;
+  transform: skew(10deg) rotate(30deg) translate(-90%);
+}
+
+.rose .branch .petal3 {
+  top: 12%;
+  transform: skew(10deg) rotate(-10deg);
+}
+
+
+.flower1.daisy {
+  transform: translateY(200%);
+  animation-name: grow-daisy;
+  animation-duration: 4s;
+  z-index: 200;
+}
+
+.flower2.daisy {
+  transform: translateY(260%);
+  animation-name: grow-daisy2;
+  animation-duration: 4s;
+  z-index: 200;
+}
+
+
+.daisy .circle {
+  height: 60px;
+  width: 60px;
+  animation: circle-anim;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  background: var(--daisy);
+}
+ .daisy .circle .inner-circle {
+  height: 20px;
+  width: 20px;
+  background: var(--red);
+}
+
+
+@keyframes grow-flower1 {
+  from {
+    transform: translateY(400%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+}
+
+@keyframes grow-flower2 {
+  from {
+    transform: translateY(400%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(50%);
+    opacity: 1;
+  }
+}
+
+@keyframes grow-rose {
+  from {
+    transform: translateY(800%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(270%);
+    opacity: 1;
+  }
+}
+
+@keyframes grow-rose2 {
+  from {
+    transform: translateY(800%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(250%);
+    opacity: 1;
+  }
+}
+
+@keyframes grow-daisy {
+  from {
+    transform: translateY(800%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(200%);
+    opacity: 1;
+  }
+}
+
+@keyframes grow-daisy2 {
+  from {
+    transform: translateY(800%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(260%);
+    opacity: 1;
+  }
+}
+
+@keyframes circle-anim {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
