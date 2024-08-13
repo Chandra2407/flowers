@@ -33,7 +33,8 @@ body {
   background: var(--bg);
   overflow: hidden;
 }
-#heading{
+
+#heading {
   color: rgba(65, 65, 65, 0.66);
   margin-left: 30px;
   margin-top: 30px;
@@ -53,14 +54,13 @@ body {
 }
 
 .buttons {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 25px;
   z-index: 10000;
+  position: fixed;
+  top: 0;
 }
 
 #btn {
@@ -68,7 +68,7 @@ body {
   padding: 10px;
   border-radius: 100%;
   background: transparent;
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.566);
   border: 2px solid transparent;
   font-size: 24px;
   font-weight: bold;
@@ -82,6 +82,7 @@ body {
   position: absolute;
   bottom: 0;
   margin-left: 10px;
+  margin-right: 10px;
   flex-wrap: wrap;
   align-items: center;
 }
