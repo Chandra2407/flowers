@@ -45,7 +45,21 @@ body {
   overflow: hidden;
   background: url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat
 }
-
+.buttons{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+#btn{
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+}
 .flowers {
   display: flex;
   justify-content: center;
